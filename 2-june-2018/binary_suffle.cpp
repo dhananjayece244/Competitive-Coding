@@ -12,8 +12,7 @@ int main()
 		a11=a;
 		b11=b;
 
-		while(a)
-		{
+		while(a){
 			if(a&1 && !f1)
 				f1=a1;
 			a>>1;
@@ -21,8 +20,7 @@ int main()
 		}
 		b1=0;
 		f2=0;
-		while(b)
-		{
+		while(b){
 			if(b&1 && !f2)
 				f2=b1;
 			b>>1;
@@ -32,8 +30,7 @@ int main()
 			ans=0;
 		else if(b==0)
 			ans=-1;
-		else if(a1<=b1)
-		{
+		else if(a1<=b1){
 			ans=b1-a1-1 + f1?f1+1:1; 
 		}
 		else{
