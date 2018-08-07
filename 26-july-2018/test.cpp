@@ -7,7 +7,9 @@ int FIND(int x) {
 }
 bool UNION(int x,int y) {
 	int xx = FIND(x); int yy = FIND(y);
-	if(xx == yy) return false;
+	
+    if(xx == yy) return false;
+
 	if(RANK[xx]>RANK[yy]) {
         uf[yy]=xx;
         cnt[xx]+=cnt[yy];
@@ -19,3 +21,4 @@ bool UNION(int x,int y) {
 				if(RANK[xx] == RANK[yy]) RANK[yy]++;
     }
 }
+
