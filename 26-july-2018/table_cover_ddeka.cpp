@@ -47,7 +47,6 @@ ll fact(ll n){
 }
 
 ll inverseModulo(ll n){
-
     return power(n, mod-2)%mod;
 }
 int main(){
@@ -62,13 +61,8 @@ int main(){
    cout<<"a "<<a<<" b "<<b<<endl;
    b = b/2;
    ll ans =  (fact(2*b)*inverseModulo(fact(b+1))%mod)*inverseModulo(fact(b))%mod;
-
    cout<<"No of balanced parenth of size "<<2*b<<" is = "<<ans<<endl;
-
    ans = ans*(2*b+1)%mod;
-
-
    cout<<ans<<endl;
    return 0;
-
 }
