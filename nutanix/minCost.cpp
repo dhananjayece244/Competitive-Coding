@@ -3,24 +3,24 @@ using namespace std;
 int X, A, B;
 long long dp[100005];
 bool visited[100005];
-// long long solve(int idx){
-// 	if(idx<0 || idx>X)
-// 		return 1e9;
-// 	if(idx==X)
-// 		return 0;
-// 	if(dp[idx]!=-1)
-// 		return dp[idx];
-// 	if(visited[idx])
-// 		return 1e9;
-// 	visited[idx]= true;
-// 	long long res;
+long long solve(int idx){
+	if(idx<0 || idx>X)
+		return 1e9;
+	if(idx==X)
+		return 0;
+	if(dp[idx]!=-1)
+		return dp[idx];
+	if(visited[idx])
+		return 1e9;
+	visited[idx]= true;
+	long long res;
 
-// 	res = A + solve(idx+1);
-// 	res = min(res, A + solve(idx-1));
-// 	res = min(res, B + solve(2*idx)); 
+	res = A + solve(idx+1);
+	res = min(res, A + solve(idx-1));
+	res = min(res, B + solve(2*idx)); 
 
-// 	return dp[idx]=res; 
-// }
+	return dp[idx]=res; 
+}
 long long solve(int idx){
 	if(idx<0 || idx>X)
 		return 1e9;
