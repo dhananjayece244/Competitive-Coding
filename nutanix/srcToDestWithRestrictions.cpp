@@ -1,3 +1,23 @@
+/*
+There are N points on a 2D- grid in the form (x,y). The distance between any two points x1,y1 and x2,y2 is=|x1-x2|+|y1-y2|. We have to traverse all the points starting from any one such that the total distance travelled by you is minimum. But, there are M restrictions, in the form u,v such that you cannot traverse v after covering u.
+e.g.:
+
+Input- 5  (N=Number of points)
+
+                1,1 2,2 3,3 4,4 5,5    (xy coordinates of these points)
+
+                2   (M=number of restrictions)
+
+            1 2           (meaning you cannot traverse 2nd point(2,2)  after covering 1st(1,1))
+
+            4 3                (meaning you cannot traverse 3rd point(3,3) after covering 4th(4,4))
+
+              Output- 10
+
+explanation--- >   traverse in the order-----   2,2---> 1,1----> 3,3------>4,4------>5,5
+*/
+
+
 #include <bits/stdc++.h>
 using namespace std;
 
